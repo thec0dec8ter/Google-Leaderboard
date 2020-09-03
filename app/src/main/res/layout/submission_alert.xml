@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center">
+
+    <ImageButton
+        android:id="@+id/cancel_btn"
+        android:src="@drawable/ic_cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/colorTransparent"
+        android:layout_gravity="end"
+        android:padding="5dp"
+        android:layout_margin="10dp"
+        android:onClick="showText"/>
+
+    <TextView
+        android:text="Are you sure ?"
+        android:textSize="25sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"/>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        app:cardBackgroundColor="@android:color/holo_orange_dark"
+        android:layout_margin="30dp">
+
+        <Button
+            android:id="@+id/confirm_btn"
+            android:text="Yes"
+            android:textColor="@android:color/holo_orange_dark"
+            android:textAllCaps="false"
+            android:background="@android:color/white"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="1dp"
+            android:onClick="showText"/>
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>
