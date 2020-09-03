@@ -87,7 +87,7 @@ public class SubmissionActivity extends AppCompatActivity {
             View responseView;
             @Override
             public void onResponse(Call<Void> call, Response<Void> response) {
-                if(response.code() == 200){
+                if(response.isSuccessful()){
                     responseView = getLayoutInflater().inflate(R.layout.submission_success, null, false);
                     alertDialog.setContentView(responseView);
                 }
