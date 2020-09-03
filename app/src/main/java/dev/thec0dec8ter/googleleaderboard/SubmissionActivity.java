@@ -1,6 +1,7 @@
 package dev.thec0dec8ter.googleleaderboard;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -87,6 +88,7 @@ public class SubmissionActivity extends AppCompatActivity {
             View responseView;
             @Override
             public void onResponse(Call<Void> call, Response<Void> response) {
+                Log.d("Submission", response.toString());
                 if(response.isSuccessful()){
                     responseView = getLayoutInflater().inflate(R.layout.submission_success, null, false);
                     alertDialog.setContentView(responseView);
